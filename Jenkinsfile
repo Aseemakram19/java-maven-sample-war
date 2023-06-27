@@ -36,7 +36,7 @@ pipeline {
                 sh 'docker rmi  mynginx --tty=false'
                 sh 'ddocker build -t mynginx .'
 	        sh 'docker push aseemakram19/mynginx:latest'
-            
+	    }
         }
 		
 		
