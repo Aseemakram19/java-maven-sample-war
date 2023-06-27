@@ -30,6 +30,12 @@ pipeline {
                
             }
         }
+	    stage('docker pull and expose') {
+            steps {
+               docker.image('nginx').pull()
+                docker.image('nginx').run('-d -p 81:80 --name mynginx nginx')
+            }
+        }
 		
 		
     }
