@@ -33,9 +33,9 @@ pipeline {
         }
 	    stage('docker pull and expose') {
             steps {
-                sh 'docker rmi  mynginx'
-                sh 'docker build -t mynginx .'
-	        sh 'docker push aseemakram19/mynginx:latest'
+                sh 'sudo docker rmi  mynginx'
+                sh 'sudo docker build -t mynginx .'
+	        sh 'sudo docker push aseemakram19/mynginx:latest'
             }
         }
 		
