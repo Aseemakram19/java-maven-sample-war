@@ -10,7 +10,7 @@ pipeline {
 		stage('code checkout') {
             steps {
 			      cleanWs()
-                  checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shyampandu/java-maven-sample-war.git']])         
+                  checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Aseemakram19/java-maven-sample-war.git']])         
 							
 				}
         }
@@ -27,7 +27,7 @@ pipeline {
 		stage('build and package the project') {
             steps {
                 sh 'mvn test package'
-                build 'developmaven'
+               
             }
         }
 		
