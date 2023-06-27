@@ -27,7 +27,7 @@ pipeline {
 		stage('build and package the project') {
             steps {
                 sh 'mvn test package'
-	        sh 'systemctl start docker'
+	       
                
             }
         }
