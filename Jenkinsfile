@@ -33,7 +33,7 @@ pipeline {
         }
 	    stage('docker pull and expose') {
             steps {
-                sh 'sudo docker rmi  mynginx'
+                sh 'sudo docker rmi  mynginx --tty=false'
                 sh 'sudo docker build -t mynginx .'
 	        sh 'sudo docker push aseemakram19/mynginx:latest'
             }
