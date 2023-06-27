@@ -32,8 +32,9 @@ pipeline {
         }
 	    stage('docker pull and expose') {
             steps {
-                docker.image('nginx').pull()
-                docker.image('nginx').run('-d -p 81:80 --name mynginx nginx')
+                sh 'docker run --rm  mynginx"
+                sh 'docker build -t mynginx .'
+	        sh 'docker push aseemakram19/mynginx:latest'
             }
         }
 		
